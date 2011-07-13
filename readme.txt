@@ -2,8 +2,8 @@
 Contributors: BrokenCrust
 Tags: widget, category, sub-category, list
 Requires at least: 2.8
-Tested up to: 3.1
-Stable tag: 0.1
+Tested up to: 3.2.1
+Stable tag: 1.0
 License: GPLv2 or later
 
 This Widget lists the sub-categories for a given category.
@@ -11,13 +11,11 @@ This Widget lists the sub-categories for a given category.
 
 == Description ==
 
-Sometimes when you divide up your WordPress content into categories it all ends up in sub-categories
+Sometimes when you divide up your WordPress content into categories it all ends up in sub-categories of one or two main categories that don't have any content themselves.
 
-of one or two main categories that don't have any content themselves.  With the widget you can add a
+With the widget you can add a list of sub-categories even if the parent doesn't have posts.
 
-list of sub-categories even if the parent doesn't have posts.  You can display sub-categories without
-
-posts and you can even add the number of posts in each sub-category.
+You can display sub-categories without posts and you can even add the number of posts in each sub-category.
 
 
 == Installation ==
@@ -41,6 +39,10 @@ Installing is pretty easy takes only a minute or two.
 
 == Changelog ==
 
+= 1.0 =
+
+* First Production Release
+
 = 0.1 =
 
-Initial Release
+* Initial Release
