@@ -3,7 +3,7 @@
 Plugin Name: Sub Categories Widget
 Description: This Widget lists the sub-categories for a given category.
 Author: BrokenCrust
-Version: 1.0
+Version: 1.1
 Author URI: http://brokencrust.com/
 Plugin URI: http://brokencrust.com/plugins/sub-categories-widget/
 License: GPLv2 or later
@@ -60,12 +60,7 @@ class SubCategoriesWidget extends WP_Widget {
 			}
 			
 			echo '<ul>';
-			
-			foreach ($subs as $s => $values) {
-				echo '<li><a href="'.get_category_link($subs[$s]->cat_ID).'">'.$subs[$s]->name.'</a>';
-				if ($show_post_count) { echo ' ('.$subs[$s]->count.')'; }
-				echo '</li>';
-			}
+			wp_list_categories(array('parent' => $category_id, 'hide_empty' => $hide_empty_cats, 'show_count' => $show_post_count, 'title_li' => null));
 			echo '</ul>';
 			echo $after_widget;
 		}

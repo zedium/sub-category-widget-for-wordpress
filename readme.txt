@@ -2,8 +2,8 @@
 Contributors: BrokenCrust
 Tags: widget, category, sub-category, list
 Requires at least: 2.8
-Tested up to: 3.3
-Stable tag: 1.0
+Tested up to: 3.3.1
+Stable tag: 1.1
 License: GPLv2 or later
 
 This Widget lists the sub-categories for a given category.
@@ -38,6 +38,10 @@ Installing is pretty easy takes only a minute or two.
 
 
 == Changelog ==
+
+= 1.1 =
+
+* Highlights the current category if on a category archive page (use .current-cat to style)
 
 = 1.0 =
 
