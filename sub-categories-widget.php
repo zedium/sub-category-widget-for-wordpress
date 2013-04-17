@@ -42,7 +42,7 @@ class SubCategoriesWidget extends WP_Widget {
 		$title_link = empty($instance['title_link']) ? 0 : $instance['title_link'];
 
 		if ($use_cat_title) {
-			$title = apply_filters('widget_title', get_cat_name($category_id), $instance, $this->id_base);	
+			$title = apply_filters('widget_title', get_cat_name($category_id), $instance, $this->id_base);
 		} else {
 			$title = apply_filters('widget_title', empty($instance['title'] ) ? __('Sub Categories', 'sub_categories') : $instance['title'], $instance, $this->id_base);
 		}
@@ -52,13 +52,13 @@ class SubCategoriesWidget extends WP_Widget {
 		if (!empty($subs)) {
 
 			echo $before_widget;
-			
+
 			if ($title_link) {
 				echo $before_title.'<a href="'.get_category_link($category_id).'">'.$title.'</a>'.$after_title;
 			} else {
 				echo $before_title.$title.$after_title;
 			}
-			
+
 			echo '<ul>';
 			wp_list_categories(array('parent' => $category_id, 'hide_empty' => $hide_empty_cats, 'show_count' => $show_post_count, 'title_li' => null));
 			echo '</ul>';
