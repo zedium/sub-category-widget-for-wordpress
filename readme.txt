@@ -2,8 +2,8 @@
 Contributors: BrokenCrust
 Tags: widget, category, sub-category, list
 Requires at least: 2.8
-Tested up to: 3.5.1
-Stable tag: 1.1
+Tested up to: 3.5.2
+Stable tag: 1.2
 License: GPLv2 or later
 
 This Widget lists the sub-categories for a given category.
@@ -38,6 +38,11 @@ Installing is pretty easy takes only a minute or two.
 
 
 == Changelog ==
+
+= 1.2 =
+
+* Added ability to exclude categories (with a comma delimited list)
+* Added option to show the entire sub-category tree rather than just one level
 
 = 1.1 =
 

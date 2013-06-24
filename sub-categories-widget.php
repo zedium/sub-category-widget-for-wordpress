@@ -3,7 +3,7 @@
 Plugin Name: Sub Categories Widget
 Description: This Widget lists the sub-categories for a given category.
 Author: BrokenCrust
-Version: 1.1
+Version: 1.2
 Author URI: http://brokencrust.com/
 Plugin URI: http://brokencrust.com/plugins/sub-categories-widget/
 License: GPLv2 or later
@@ -40,14 +40,18 @@ class SubCategoriesWidget extends WP_Widget {
 		$hide_empty_cats = empty($instance['hide_empty_cats']) ? 0 : $instance['hide_empty_cats'];
 		$show_post_count = empty($instance['show_post_count']) ? 0 : $instance['show_post_count'];
 		$title_link = empty($instance['title_link']) ? 0 : $instance['title_link'];
+		$excluded = empty($instance['excluded']) ? '' : $instance['excluded'];
+		$sub_subs = empty($instance['sub_subs']) ? 0 : $instance['sub_subs'];
 
 		if ($use_cat_title) {
 			$title = apply_filters('widget_title', get_cat_name($category_id), $instance, $this->id_base);
 		} else {
 			$title = apply_filters('widget_title', empty($instance['title'] ) ? __('Sub Categories', 'sub_categories') : $instance['title'], $instance, $this->id_base);
 		}
+		
+		$parent = $sub_subs == 1 ? 'child_of' : 'parent';
 
-		$subs = get_categories(array('parent' => $category_id, 'hide_empty' => $hide_empty_cats, 'show_count' => $show_post_count));
+		$subs = get_categories(array($parent => $category_id, 'hide_empty' => $hide_empty_cats, 'show_count' => $show_post_count, 'exclude' => $excluded));
 
 		if (!empty($subs)) {
 
@@ -60,7 +64,7 @@ class SubCategoriesWidget extends WP_Widget {
 			}
 
 			echo '<ul>';
-			wp_list_categories(array('parent' => $category_id, 'hide_empty' => $hide_empty_cats, 'show_count' => $show_post_count, 'title_li' => null));
+			wp_list_categories(array($parent => $category_id, 'hide_empty' => $hide_empty_cats, 'show_count' => $show_post_count, 'exclude' => $excluded, 'title_li' => null));
 			echo '</ul>';
 			echo $after_widget;
 		}
@@ -76,13 +80,17 @@ class SubCategoriesWidget extends WP_Widget {
 		$instance['hide_empty_cats'] = (int) $new_instance['hide_empty_cats'];
 		$instance['show_post_count'] = (int) $new_instance['show_post_count'];
 		$instance['title_link'] = (int) $new_instance['title_link'];
+		$instance['excluded'] = trim(strip_tags($new_instance['excluded']));
+		$instance['sub_subs'] = (int) $new_instance['sub_subs'];
 
 		return $instance;
 	}
 
 	function form($instance) {
 
-		$instance = wp_parse_args((array) $instance, array('title' => __('Sub Categories', 'sub_categories'), 'category_id' => 1, 'use_cat_title' => 0, 'hide_empty_cats' => 0, 'show_post_count' => 1, 'title_link' => 0));
+		$instance = wp_parse_args((array) $instance, array('title' => __('Sub Categories', 'sub_categories'), 'category_id' => 1, 'use_cat_title' => 0, 'hide_empty_cats' => 0, 'show_post_count' => 1, 'title_link' => 0, 'excluded' => '', 'sub_subs' => 0 ));
+
+		$excluded = attribute_escape($instance['excluded']);
 
 		?>
 			<p>
@@ -123,6 +131,13 @@ class SubCategoriesWidget extends WP_Widget {
 				<label for="<?php echo $this->get_field_id('title_link'); ?>"><?php _e('Add Parent Cat Link to Title?', 'sub_categories'); ?></label>
 			</p>
 			<p>
+                        	<label for="<?php echo $this->get_field_id( 'excluded' ); ?>"> <?php _e('Categories to exclude (comma separated list of Category IDs):'); ?> </label>
+                        	<input id="<?php echo $this->get_field_id( 'excluded' ); ?>" name="<?php echo $this->get_field_name( 'excluded' ); ?>" value="<?php echo $excluded; ?>"/>
+                	</p>
+			<p>
+				<input id="<?php echo $this->get_field_id('sub_subs'); ?>" name="<?php echo $this->get_field_name('sub_subs'); ?>" type="checkbox" value="1" <?php if ($instance['sub_subs']) echo 'checked="checked"'; ?>/>
+				<label for="<?php echo $this->get_field_id('sub_subs'); ?>"><?php _e('Show full sub-category tree?', 'sub_categories'); ?></label>
+			</p>
 		<?php
 	}
 }
