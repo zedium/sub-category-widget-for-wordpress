@@ -2,7 +2,7 @@
 Contributors: BrokenCrust
 Tags: widget, category, sub-category, list
 Requires at least: 2.8
-Tested up to: 3.5.2
+Tested up to: 3.6
 Stable tag: 1.2
 License: GPLv2 or later
 
