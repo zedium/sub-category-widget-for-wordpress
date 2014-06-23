@@ -3,7 +3,7 @@ Contributors: BrokenCrust
 Tags: widget, category, sub-category, list
 Requires at least: 2.8
 Tested up to: 3.9
-Stable tag: 1.2
+Stable tag: 1.3
 License: GPLv2 or later
 
 This Widget lists the sub-categories for a given category.
@@ -30,7 +30,7 @@ Installing is pretty easy takes only a minute or two.
 
 4. Add one or more of these to your themes widget display areas.
 
-5. For each widget you add, select a title and category, then decide if you'd like empty categories and post counts shown.
+5. For each widget you add, decide what and how you'd like it to display.
 
 6. Save your settings.
 
@@ -38,6 +38,11 @@ Installing is pretty easy takes only a minute or two.
 
 
 == Changelog ==
+
+= 1.3 =
+
+* Added option to show as dropdown list
+* Tidy of widget options area
 
 = 1.2 =
 
