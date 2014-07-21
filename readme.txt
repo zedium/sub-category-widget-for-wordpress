@@ -42,9 +42,9 @@ Installing is pretty easy takes only a minute or two.
 = 1.4 =
 * Added an option to use the first category of the post as the parent
 * Improved and updated sanitation and validation
-* Exclude is now a mutliple selection list
+* Exclude is now a multiple selection list
 
-= 1.3.01 =
+= 1.3.1 =
 * Updated the dropdown to be in name order (to match the list)
 
 = 1.3 =
