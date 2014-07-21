@@ -1,9 +1,9 @@
 === Sub Categories Widget ===
 Contributors: BrokenCrust
 Tags: widget, category, sub-category, list
-Requires at least: 2.8
-Tested up to: 3.9
-Stable tag: 1.3.01
+Requires at least: 2.9
+Tested up to: 4.0
+Stable tag: 1.4
 License: GPLv2 or later
 
 This Widget lists the sub-categories for a given category.
@@ -39,28 +39,27 @@ Installing is pretty easy takes only a minute or two.
 
 == Changelog ==
 
-= 1.3.01 =
+= 1.4 =
+* Added an option to use the first category of the post as the parent
+* Improved and updated sanitation and validation
+* Exclude is now a mutliple selection list
 
+= 1.3.01 =
 * Updated the dropdown to be in name order (to match the list)
 
 = 1.3 =
-
 * Added option to show as dropdown list
 * Tidy of widget options area
 
 = 1.2 =
-
 * Added ability to exclude categories (with a comma delimited list)
 * Added option to show the entire sub-category tree rather than just one level
 
 = 1.1 =
-
 * Highlights the current category if on a category archive page (use .current-cat to style)
 
 = 1.0 =
-
 * First Production Release
 
 = 0.1 =
-
 * Initial Release
