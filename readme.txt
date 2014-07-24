@@ -3,7 +3,7 @@ Contributors: BrokenCrust
 Tags: widget, category, sub-category, list
 Requires at least: 2.9
 Tested up to: 4.0
-Stable tag: 1.4
+Stable tag: 1.4.1
 License: GPLv2 or later
 
 This Widget lists the sub-categories for a given category.
@@ -39,12 +39,14 @@ Installing is pretty easy takes only a minute or two.
 
 == Changelog ==
 
+=1.4.1=
+* Fixed missing parent category notice on pages when using irst category of the post option
+
 = 1.4 =
 * Added an option to use the first category of the post as the parent
 * Improved and updated sanitation and validation
-* Exclude is now a multiple selection list
 
-= 1.3.1 =
+= 1.3.01 =
 * Updated the dropdown to be in name order (to match the list)
 
 = 1.3 =
