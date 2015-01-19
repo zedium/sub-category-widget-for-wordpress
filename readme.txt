@@ -6,8 +6,7 @@ Tested up to: 4.1
 Stable tag: 1.4.1
 License: GPLv2 or later
 
-This Widget lists the sub-categories for a given category.
-
+This Widget lists the sub-categories as links or in a drop-down menu for a given category.
 
 == Description ==
 
@@ -15,31 +14,31 @@ Sometimes when you divide up your WordPress content into categories it all ends 
 
 With the widget you can add a list of sub-categories even if the parent doesn't have posts.
 
-You can display sub-categories without posts and you can even add the number of posts in each sub-category.
+You can display and filter sub-categories in various ways:
 
+* Use the parent category as the widget title
+* Show post counts in bracket next to the name
+* Hide empty sub-categories
+* Add a link to the parent category to the widget title
+* Show the full sub-category tree so it include sub-sub categories and so on as well
+* Display the list as dropdown rather than as links
+* Use the first category of the current post as the parent
+* Exclude one or more sub-categories from the list
 
 == Installation ==
 
 Installing is pretty easy takes only a minute or two.
 
-1. Upload 'sub-category-widget' directory to your '/wp-content/plugins/' directory.
-
-2. Activate the plugin through the 'Plugins' screen in WordPress.
-
-3. On the 'Widgets' sub-menu of 'Appearance' you will find a new widget type called 'Sub Category'.
-
-4. Add one or more of these to your themes widget display areas.
-
-5. For each widget you add, decide what and how you'd like it to display.
-
-6. Save your settings.
-
-7. That's it.  Enjoy!
-
+1. Upload `sub-category-widget` directory to your `/wp-content/plugins/` directory.
+1. Activate the plugin through the Plugins screen in WordPress.
+1. On the Widgets sub-menu of Appearance you will find a new widget type called Sub Category.
+1. Add one or more of these to your themes widget display areas.
+1. For each widget you add, decide what and how you'd like it to display.
+1. Save your settings.
 
 == Changelog ==
 
-=1.4.1=
+= 1.4.1 =
 * Fixed missing parent category notice on pages when using irst category of the post option
 
 = 1.4 =
