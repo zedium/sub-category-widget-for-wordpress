@@ -39,7 +39,7 @@ Installing is pretty easy takes only a minute or two.
 == Changelog ==
 
 = 1.4.1 =
-* Fixed missing parent category notice on pages when using irst category of the post option
+* Fixed missing parent category notice on pages when using first category of the post option
 
 = 1.4 =
 * Added an option to use the first category of the post as the parent
